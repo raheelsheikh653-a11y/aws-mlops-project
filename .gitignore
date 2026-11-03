@@ -1,0 +1,14 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Environments
+venv/
+env/
+.env
+
+# Model artifacts & data (optional)
+*.tar.gz
+*.joblib

@@ -1,0 +1,24 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.10
+    commands:
+      - echo "Installing dependencies..."
+      - pip install -r requirements.txt
+  
+  pre_build:
+    commands:
+      - echo "Running ML Unit Tests and Data Quality Validation..."
+      - python data_generator.py
+      - pytest module6_cicd/test_ml_pipeline.py -v
+  
+  build:
+    commands:
+      - echo "CI Tests passed successfully! Triggering MLOps pipeline or packaging model..."
+      - echo "Building artifacts completed at `date`"
+
+artifacts:
+  files:
+    - '**/*'
