@@ -1,0 +1,20 @@
+﻿{
+  "status": "InService-Active",
+  "endpoint_name": "raheel-churn-endpoint",
+  "model_name": "raheel-churn-model",
+  "aws_region": "ap-southeast-2",
+  "framework": "Scikit-Learn (RandomForestClassifier)",
+  "model_accuracy": "97.88%",
+  "input_payload": {
+    "tenure": 24,
+    "monthly_charges": 70.5,
+    "total_charges": 1692.0,
+    "contract_type": 1,
+    "tech_support": 1
+  },
+  "prediction": [0],
+  "prediction_label": "No Churn (Retained)",
+  "author": "Raheel Sheikh (@raheelsheikh653-a11y)",
+  "aws_sagemaker_endpoint_url": "https://runtime.sagemaker.ap-southeast-2.amazonaws.com/endpoints/raheel-churn-endpoint/invocations",
+  "github_repository": "https://github.com/raheelsheikh653-a11y/aws-mlops-project"
+}
